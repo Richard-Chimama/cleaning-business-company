@@ -10,6 +10,7 @@
 :root{
     /*---- Colors ---*/
     --orange:#FF912D;
+    --orange-opacity: #ff922d86;
     --light-gray: #535353;
     --white-gray: #cfcbcb;
     --white: #FFF;
@@ -85,6 +86,78 @@
     background-color: var(--orange);
     height: 2.5rem;
     width: 6.5rem;
-    border-color: var(--orange);
+    border: none;
     border-radius: 10px;
+}
+
+.contact-button:hover{
+    box-shadow: 0px 0px 2px 2px var(--white);
+}
+
+.header-icons{
+    height: 0.7rem;
+    width: 0.7rem;
+    color: var(--light-gray);
+}
+
+.active{
+    padding-bottom: 0.2rem;
+    border-bottom: 3px solid var(--orange);
+    
+}
+
+
+
+/*-------- media queries -------*/
+@media screen and (max-width:960px) {
+    
+}
+
+@media screen and (min-width:768px) {
+    .nav-links:hover{
+        padding-bottom: 0.2rem;
+        border-bottom: 3px solid var(--orange-opacity);
+    
+    }
+}
+
+@media screen and (max-width:768px) {
+    
+    .navigation-bar .nav{
+        flex-direction: column;
+        row-gap: 1rem;
+        width: 100%;
+    }
+
+    .nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-btn a{
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        
+    }
+
+    .nav-links{
+        background-color: var(--light-gray);
+        border-radius: 10px;
+        padding: 0.5rem;
+    
+    }
+    
+    .active{
+        background-color: var(--orange-opacity);
+        border: none;
+        border-radius: 10px;
+        padding: 0.5rem;
+
+
+    }
+    .contact-button {
+        width: 100%;
+        margin-top: 2rem;
+    }
 }
