@@ -17,9 +17,6 @@
     --deep-gray: #333333;
 }
 
-.header-container, .main-container, .footer-container{
-    
-}
 
 .container{
     display:grid;
@@ -121,6 +118,8 @@
     }
 }
 
+/*---- Mobile view -------*/
+
 @media screen and (max-width:768px) {
     
     .navigation-bar .nav{
@@ -130,15 +129,13 @@
     }
 
     .nav li {
+        position: relative;
         width: 100%;
         text-align: center;
     }
 
     .nav-btn a{
-        display: inline-block;
-        position: relative;
-        z-index: 1;
-        
+        display: block;        
     }
 
     .nav-links{
@@ -159,5 +156,14 @@
     .contact-button {
         width: 100%;
         margin-top: 2rem;
+        height: 2.8rem;
+    }
+    .contact-detail{
+        display: flex;
+        justify-content: space-between;
+        height: 3rem;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 500;
     }
 }
