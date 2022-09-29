@@ -3,18 +3,21 @@
 *{
     box-sizing: border-box;
     font-family: Poppins;
+    margin: 0;
+    padding: 0;
 }
 
 :root{
     /*---- Colors ---*/
     --orange:#FF912D;
     --light-gray: #535353;
+    --white-gray: #cfcbcb;
     --white: #FFF;
     --deep-gray: #333333;
 }
 
 .header-container, .main-container, .footer-container{
-    border: 2px solid black;
+    
 }
 
 .container{
@@ -69,12 +72,19 @@
 }
 
 .contact-detail{
-    border: 1px solid black;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 1rem;
+    background-color: var(--light-gray);
+    color: var(--white-gray);
+    font-size: 14px;
+    font-weight: 200;
+    padding-inline: 1rem;
 }
 .contact-button {
     background-color: var(--orange);
     height: 2.5rem;
     width: 6.5rem;
     border-color: var(--orange);
-    border-radius: 2.5px 2.5px;
+    border-radius: 10px;
 }
