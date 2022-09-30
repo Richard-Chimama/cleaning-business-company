@@ -31,6 +31,7 @@
 }
 
 .header-container{
+    position: fixed;
     grid-area: header;
     top: 0;
     width: 100%;
@@ -204,6 +205,9 @@ main {
 /*---- Mobile view -------*/
 
 @media screen and (max-width:768px) {
+    .header-container{
+        position:static;
+    }
     
     .navigation-bar .nav{
         flex-direction: column;
