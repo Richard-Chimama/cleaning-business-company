@@ -185,15 +185,102 @@ main {
 }
 
 /*-------- media queries -------*/
+
+/* -------- Tablet view------------ */
 @media screen and (max-width:960px) {
+    .header-container{
+        position:static;
+    }
+    
+    .navigation-bar .nav{
+        flex-direction: row;
+        row-gap: 1rem;
+        width: 100%;
+    }
+
+    .contact-button {
+        margin-bottom: 32px;
+    }
+
+    .nav li {
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-btn a{
+        display: block;        
+    }
+
+    .nav-links{
+        background-color: var(--light-gray);
+        border-radius: 10px;
+        padding: 0.5rem;
+    
+    }
+    
+    .active{
+        background-color: var(--orange-opacity);
+        border: none;
+        border-radius: 10px;
+        padding: 0.5rem;
+
+
+    }
+    .contact-button {
+        width: 100%;
+        margin-top: 2rem;
+        height: 2.8rem;
+    }
+    .contact-detail{
+        display: flex;
+        justify-content: space-between;
+        height: 3rem;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "footer1"
+                             "footer2"
+                             "footer3"
+                             "footer4";
+        row-gap: 1.5rem;
+        
+    }
+
+    .footer-block {
+        margin-top: 20px;
+        padding-top: 0;
+        padding-bottom: 0;
+        height:200px;
+        
+    }
+
+    .footer1, .footer2, .footer3 {
+        margin: 0;
+        margin-inline: 2.5rem;
+    }
+
+    .footer1{
+        height: 170px;
+        margin-top: 25px;
+        
+    }
+
+    .footer-bar {
+        flex-direction: column;
+        row-gap: 10px;
+    }
     
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:960px) {
     .nav-links:hover{
         padding-bottom: 0.2rem;
         border-bottom: 3px solid var(--orange-opacity);
-    
     }
 
     .footer-container {
