@@ -11,20 +11,74 @@ main {
     margin-top: 115px;
 }
 
-
 .sections {
-    display: flex;
-    border: solid black 1px;  
+    display: flex;  
+    flex-direction: row;
 }
+
+.section-img,
+.section-info {
+    width: 50%;
+}
+
 
 .first-section {
     grid-area: section1;
 }
 
-.second-sections {
+.second-section {
     grid-area: section2;
+    background-color: var(--white-gray);
+}
+
+.first-section,
+.second-section {
+    color: var(--light-gray);
+}
+
+h2 {
+    border: 1px solid blue;
+    margin-bottom: 0.5rem;
+}
+
+.section-info {
+    margin: 0 auto;
+    padding: 1.5rem;
+    border: 1px solid red;
+}
+
+.section-img {
+    margin: 0 auto;
+    border: 1px solid green;
+}
+
+.info2 {
+    order: 2;
+}
+
+.img2 {
+   order: 1;
 }
 
 .comments-group {
+    flex-direction: column;
     grid-area: section3;
+    background-color: var(--light-gray);
+    color: var(--white-gray);
 }
+
+.comments {
+    margin: 20px auto;
+}
+
+.the-comments {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem;
+    border: 1px solid yellow
+}
+
+
+
+
