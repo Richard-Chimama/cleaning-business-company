@@ -1,1 +1,30 @@
 @import "general.css";
+
+main {
+    display: grid;
+    grid-template-areas: 
+            " section1 "
+            " section2 "
+            " section3 ";
+    width: 100%;
+    min-width: 425px;
+    margin-top: 115px;
+}
+
+
+.sections {
+    display: flex;
+    border: solid black 1px;  
+}
+
+.first-section {
+    grid-area: section1;
+}
+
+.second-sections {
+    grid-area: section2;
+}
+
+.comments-group {
+    grid-area: section3;
+}
