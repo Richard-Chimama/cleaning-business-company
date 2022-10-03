@@ -31,7 +31,7 @@
 }
 
 .header-container{
-    position: fixed;
+    position: sticky;
     grid-area: header;
     top: 0;
     width: 100%;
