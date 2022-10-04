@@ -23,7 +23,6 @@ main {
     font-size: 17px;
 }
 
-
 .first-section {
     grid-area: section1;
 }
@@ -31,6 +30,7 @@ main {
 .second-section {
     grid-area: section2;
     background-color: var(--white-gray);
+    flex-direction: row-reverse;
 }
 
 .first-section,
@@ -40,7 +40,8 @@ main {
 
 h2 {
     margin-bottom: 0.5rem;
-    font-size: 30px;
+    font-size: 28px;
+    font-weight: 600;
 }
 
 .section-info {
@@ -57,18 +58,17 @@ h2 {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    
 }
 
 #bild1 {
     padding: 1rem 1rem 1rem 0;
+    border-radius: 30% 10%;
 }
 
 #bild2 {
     padding: 1rem 0 1rem 1rem;
-}
-
-.info2 {
-    order: 2;
+    border-radius: 10% 30%;
 }
 
 .comments-group {
@@ -87,21 +87,25 @@ h2 {
     flex-direction: row;
     font-style: italic;
     font-size: 17px;
-    font-weight: 200;
+    font-weight: 300;
     justify-content: space-around;
-    gap: 10px;
+    gap: 2%;
     padding: 0 2rem 2rem 2rem;
     margin-bottom: 2rem;
 }
 
 .comments {
     width: 20%;
+    color: var(--deep-gray);
+    background-color: var(--white-gray);
+    border-radius: 10% 30%;
+    padding: 15px;
+    
 }
 
 /* --------- Tablet View----------- */
 
 @media screen and (max-width: 960px) {
-
 
   .section-info {
     margin: 0;
@@ -133,17 +137,15 @@ h2 {
         flex-direction: column;
     }
 
-   .img1 {
-    order: 1;
-   }
-
-   .info1 {
-    order: 2;
+   .first-section,
+   .second-section {
+    flex-direction: column-reverse;
    }
 
    #bild1,
    #bild2 {
     padding: 0;
+    border-radius: 0%;
    }
 
    .the-comments {
