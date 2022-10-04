@@ -83,25 +83,42 @@ h2 {
 }
 
 .the-comments {
-    display: flex;
-    flex-direction: row;
     font-style: italic;
     font-size: 17px;
     font-weight: 300;
-    justify-content: space-around;
-    gap: 2%;
     padding: 0 2rem 2rem 2rem;
     margin-bottom: 2rem;
+
+    display: grid;
+    grid-template-areas: "c1 c2 c3 c4 c5 c6";
+}
+
+.c1 {
+    grid-area: c1;
+}
+.c2 {
+    grid-area: c2;
+}
+.c3 {
+    grid-area: c3;
+}
+.c4 {
+    grid-area: c4;
+}
+.c5 {
+    grid-area: c5;
+}
+.c6 {
+    grid-area: c6;
 }
 
 .comments {
-    width: 20%;
+    min-width: 80px;
     color: var(--white-gray);
-    /* background-color: var(--white-gray); */
     outline: solid 0.5px var(--orange);
     border-radius: 10% 30%;
     padding: 15px;
-    
+    margin: 10px
 }
 
 /* --------- Tablet View----------- */
@@ -126,7 +143,13 @@ h2 {
   .the-comments {
     font-size: 14px;
     gap: 15px;
-  }
+    grid-template-columns: repeat(5, 1fr);
+
+    grid-template-areas:
+    ". c1 c2 c3 ."
+    ". c4 c5 c6 .";
+   }
+  
 
 }
 
@@ -150,7 +173,14 @@ h2 {
    }
 
    .the-comments {
-    flex-wrap: wrap;
+    font-size: 14px;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-areas:
+    ". c1 c2 ."
+    ". c3 c4 ."
+    ". c5 c6 .";
    }
 
    .comments {
