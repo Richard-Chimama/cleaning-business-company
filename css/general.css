@@ -15,11 +15,14 @@
     --white-gray: #cfcbcb;
     --white: #FFF;
     --deep-gray: #333333;
+    --deep-green:#71baee84;
+
 }
 
 
 .container{
     display:grid;
+    min-height: 100vh;
     position: relative;
     grid-template-areas: 
             " header "
@@ -27,14 +30,14 @@
             " footer ";
     width: 100%;
     min-width: 425px;
-    
 }
 
 .header-container{
-    position: fixed;
+    position: sticky;
     grid-area: header;
     top: 0;
     width: 100%;
+    z-index: 1;
 }
 
 .main-container{
@@ -104,7 +107,7 @@
 }
 
 /* -----Main------ */
-main {
+/* main {
     height: 1000px;
 }
 
