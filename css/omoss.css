@@ -8,12 +8,10 @@ main {
             " section3 ";
     width: 100%;
     min-width: 425px;
-    margin-top: 115px;
 }
 
 .sections {
-    display: flex;  
-    flex-direction: row;
+     display: flex;  
 }
 
 .section-img,
@@ -22,7 +20,7 @@ main {
 }
 
 .section-info {
-    font-size: 22px;
+    font-size: 17px;
 }
 
 
@@ -69,16 +67,8 @@ h2 {
     padding: 1rem 0 1rem 1rem;
 }
 
-.img1 {
-    
-}
-
 .info2 {
     order: 2;
-}
-
-.img2 {
-   order: 1;
 }
 
 .comments-group {
@@ -89,25 +79,82 @@ h2 {
 }
 
 .comment-header {
-    margin: 50px auto 20px;
-    
+    margin: 50px auto 20px; 
 }
 
 .the-comments {
     display: flex;
     flex-direction: row;
     font-style: italic;
-    font-size: 23px;
+    font-size: 17px;
     font-weight: 200;
     justify-content: space-around;
+    gap: 10px;
     padding: 0 2rem 2rem 2rem;
     margin-bottom: 2rem;
 }
 
 .comments {
-    width: 200px;
+    width: 20%;
 }
 
+/* --------- Tablet View----------- */
 
+@media screen and (max-width: 960px) {
+
+
+  .section-info {
+    margin: 0;
+    width: 100%;
+    font-size: 15px;
+  }
+
+ .section-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .comment-header {
+    justify-content: center;
+  }
+
+  .the-comments {
+    font-size: 14px;
+    gap: 15px;
+  }
+
+}
+
+/* -------- Mobile Views--------- */
+
+@media screen and (max-width:768px) {
+
+    .sections {
+        flex-direction: column;
+    }
+
+   .img1 {
+    order: 1;
+   }
+
+   .info1 {
+    order: 2;
+   }
+
+   #bild1,
+   #bild2 {
+    padding: 0;
+   }
+
+   .the-comments {
+    flex-wrap: wrap;
+   }
+
+   .comments {
+    min-width: 130px;
+   }
+
+
+}
 
 
