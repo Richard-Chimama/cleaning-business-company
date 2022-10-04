@@ -96,8 +96,9 @@ h2 {
 
 .comments {
     width: 20%;
-    color: var(--deep-gray);
-    background-color: var(--white-gray);
+    color: var(--white-gray);
+    /* background-color: var(--white-gray); */
+    outline: solid 0.5px var(--orange);
     border-radius: 10% 30%;
     padding: 15px;
     
