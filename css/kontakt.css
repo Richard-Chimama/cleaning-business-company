@@ -1,17 +1,20 @@
 @import "general.css";
 
 
+.main-container{
+    background-color: var(--white-gray);
+}
+
 .contact-us{
     background-color: var(--light-gray);
     color: var(--white-gray);
-    height: 650px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     row-gap: 1.5rem;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 1rem;
+    padding: 2rem;
     width: 100%
 }
 
