@@ -288,11 +288,6 @@ body{
         padding-bottom: 0.2rem;
         border-bottom: 3px solid var(--orange-opacity);
     }
-
-    .footer-container {
-        height: 300px;
-    }
-
 }
 
 /*---- Mobile view -------*/
