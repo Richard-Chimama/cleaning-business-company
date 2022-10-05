@@ -1,0 +1,193 @@
+@import "general.css";
+
+main {
+    display: grid;
+    grid-template-areas: 
+            " section1 "
+            " section2 "
+            " section3 ";
+    width: 100%;
+    min-width: 425px;
+}
+
+.sections {
+     display: flex;  
+}
+
+.section-img,
+.section-info {
+    width: 50%;
+}
+
+.section-info {
+    font-size: 19px;
+}
+
+.first-section {
+    grid-area: section1;
+}
+
+.second-section {
+    grid-area: section2;
+    background-color: var(--white-gray);
+    flex-direction: row-reverse;
+}
+
+.first-section,
+.second-section {
+    color: var(--light-gray);
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.section-info {
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.section-img {
+    margin: 0 auto;
+}
+
+#bild1,
+#bild2 {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+}
+
+#bild1 {
+    padding: 1rem 1rem 1rem 0;
+    border-radius: 30% 10%;
+}
+
+#bild2 {
+    padding: 1rem 0 1rem 1rem;
+    border-radius: 10% 30%;
+}
+
+.comments-group {
+    flex-direction: column;
+    grid-area: section3;
+    background-color: var(--light-gray);
+    color: var(--white-gray);
+}
+
+.comment-header {
+    margin: 50px auto 20px; 
+}
+
+.the-comments {
+    font-style: italic;
+    font-size: 17px;
+    font-weight: 300;
+    padding: 0 2rem 2rem 2rem;
+    margin-bottom: 2rem;
+
+    display: grid;
+    grid-template-areas: "c1 c2 c3 c4 c5 c6";
+}
+
+.c1 {
+    grid-area: c1;
+}
+.c2 {
+    grid-area: c2;
+}
+.c3 {
+    grid-area: c3;
+}
+.c4 {
+    grid-area: c4;
+}
+.c5 {
+    grid-area: c5;
+}
+.c6 {
+    grid-area: c6;
+}
+
+.comments {
+    min-width: 80px;
+    color: var(--white-gray);
+    outline: solid 0.5px var(--orange);
+    border-radius: 10% 30%;
+    padding: 15px;
+    margin: 10px
+}
+
+/* --------- Tablet View----------- */
+
+@media screen and (max-width: 960px) {
+
+  .section-info {
+    margin: 0;
+    width: 100%;
+    font-size: 15px;
+  }
+
+ .section-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .comment-header {
+    justify-content: center;
+  }
+
+  .the-comments {
+    font-size: 14px;
+    gap: 15px;
+    grid-template-columns: repeat(5, 1fr);
+
+    grid-template-areas:
+    ". c1 c2 c3 ."
+    ". c4 c5 c6 .";
+   }
+  
+
+}
+
+/* -------- Mobile Views--------- */
+
+@media screen and (max-width:768px) {
+
+    .sections {
+        flex-direction: column;
+    }
+
+   .first-section,
+   .second-section {
+    flex-direction: column-reverse;
+   }
+
+   #bild1,
+   #bild2 {
+    padding: 0;
+    border-radius: 0%;
+   }
+
+   .the-comments {
+    font-size: 14px;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-areas:
+    ". c1 c2 ."
+    ". c3 c4 ."
+    ". c5 c6 .";
+   }
+
+   .comments {
+    min-width: 130px;
+   }
+
+
+}
+
+

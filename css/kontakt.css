@@ -1,0 +1,268 @@
+@import "general.css";
+
+
+.main-container{
+    background-color: var(--white-gray);
+}
+
+.contact-us{
+    background-color: var(--light-gray);
+    color: var(--white-gray);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 1.5rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+    width: 100%
+}
+
+.openTime{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.7rem;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--white)
+}
+
+.sub-container{
+    width: 70%;
+    margin-inline: auto;
+}
+
+.google-map{
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map{
+    width: 100%;
+    height: 450px;
+}
+
+.priser-contact{
+    background-color: var(--deep-gray);
+    color: var(--white-gray);
+    outline: 2px solid black;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    padding-inline: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.8rem;
+}
+
+.priser-advert{
+    margin-right: auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.7rem;
+    font-size: 16px;
+    
+}
+
+.priser-buttons{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.7rem;
+    width: 50%;
+    font-weight: 500;
+    font-size: 16px;
+
+}
+
+.pris-btn, #submit{
+    border: 1px solid var(--orange);
+    padding: 0.7rem 2rem;
+    color: var(--orange);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-2, #submit{
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.btn-2:hover, #submit:hover{
+    color: var(--deep-gray);
+}
+
+
+.contact-form{
+    background-color: var(--light-gray);
+    margin: 0 auto;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.form-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    color: var(--white-gray);
+}
+
+.form-inputs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+                "name e-post telefon"
+                "textArea textArea textArea"
+                "check check check"
+                "submit submit submit";
+    column-gap: 0.5rem;
+    row-gap: 0.7rem;
+}
+
+#name, #e-post, #telefon{
+    height: 50px;
+    border-left: 5px solid var(--deep-gray);
+    border-bottom: 0;
+    border-top: 0;
+    padding-left: 1rem;
+    outline: none;
+}
+
+#name:focus, #e-post:focus, #telefon:focus, #text-area:focus{
+    border-left: 5px solid var(--orange);
+}
+
+#name{
+    grid-area: name;
+}
+
+#e-post{
+    grid-area: e-post;
+}
+
+#telefon{
+    grid-area: telefon;
+}
+
+#text-area{
+    grid-area: textArea;
+    height: 200px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    border-left: 5px solid var(--deep-gray);
+    border-bottom: 0;
+    border-top: 0;
+    outline: none;
+}
+
+#check-container{
+    grid-area: check;
+   display: flex;
+    justify-content: center;
+    align-items: center; 
+    column-gap: 1rem;   
+}
+
+#check{
+    height: 15px;
+    width: 15px;
+}
+
+#check-detail{
+    font-size: 12px;
+    color: var(--white-gray);
+}
+
+#submit{
+    grid-area: submit;
+    margin-top: 0.7rem;
+    font-weight: 600;
+}
+
+
+@media only screen and (max-width:960px){
+    .sub-container{
+        width: 80%;
+    }
+
+    .form-inputs{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+                    "name telefon"
+                    " e-post e-post"
+                    "textArea textArea "
+                    "check check"
+                    "submit submit";
+        
+    }
+
+   
+    .priser-buttons, .priser-advert{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:960px){
+    .truck-icon{
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .form-inputs{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+                    " name "
+                    " e-post "
+                    " telefon "
+                    " textArea "
+                    " check "
+                    " submit ";
+    }
+
+    .sub-container{
+        width: 95%;
+    }
+    
+    .priser-contact{
+        height: 350px;
+        margin-inline: auto;
+    }
+
+    .priser-advert{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .priser-note{
+        text-align:center;
+    }
+
+    .pris-btn{
+        width: 50%;
+        text-align: center;
+    }
+
+    .priser-contact, .priser-advert, .priser-buttons{
+        flex-direction: column;
+        row-gap: 1rem;
+        width: 100%;
+    }
+
+    
+}
