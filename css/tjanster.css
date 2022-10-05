@@ -1,0 +1,164 @@
+@import "general.css";
+
+/*---Banner---*/
+.container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--white);
+    width: 100%;
+    color: var(--dark-gray);
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.bannerpicture {
+    object-fit: cover;
+    width: 91%;
+    height: 80%;
+    margin-left: 25px;
+    margin-top: 35px;
+    border-radius: 30% 10%;
+}
+
+.container2,
+.container4 {
+    background-color: var(--white-gray);
+}
+
+.picture-banner-container,
+ .text-container2,
+ .text-container3,
+ .text-container4,
+ .text-container5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.text-banner-container {
+    display: flex;
+    align-content: center;
+}
+
+.bannertext  {
+   justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 8px;   
+}
+
+h2 {
+    font-size: 38px;
+    text-align: center;
+
+}
+
+/*---Pictures in the spans---*/
+.picture2,
+.picture3,
+.picture4{
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.container2,
+.container3,
+.container4,
+.container5 {
+    display: flex;
+    width: 100%;
+    color: var(--dark-gray);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 17px;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+span {
+    line-height: 1.7;
+}
+
+.text-sections{
+    margin-left: 120px;
+}
+
+/*---Version for tablet view ---*/
+@media screen and (max-width: 960px) {
+
+    .container1,
+    .text-container2,
+    .text-container3,
+    .text-container4,
+    .text-container5 {
+    text-align: center;
+    }
+   
+    .bannerpicture {
+        object-fit: cover;
+        width: 100%;
+        height: 80%;
+        margin-left: 0;
+        margin-top: 65px;
+        border-radius: 50%;
+        
+    }
+    .picture2,
+    .picture3,
+    .picture4 { 
+        display: none;
+    }
+
+    .picture-banner-container {
+        margin-left: 10px;
+    }
+
+    .text2,
+    .text3,
+    .text4,
+    .text5 {
+       margin-left: 0;  
+    }
+
+    .container1,
+    .text-container2,
+    .text-container3,
+    .text-container4,
+    .text-container5 {
+        margin-left: 0;
+        padding: 20px; 
+    }
+}
+
+/*---Version for mobile view ---*/
+@media screen and (max-width: 768px){
+    .container1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bannerpicture {
+        display: none;
+    }
+
+    .container1,
+    .text-container2,
+    .text-container3,
+    .text-container4,
+    .text-container5 {
+    text-align: center;
+    }
+
+    h2 {
+        border-bottom: 3px dotted var(--orange);
+    }
+     }
