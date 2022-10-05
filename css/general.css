@@ -6,6 +6,9 @@
     margin: 0;
     padding: 0;
 }
+body{
+    width: 100%;
+}
 
 :root{
     /*---- Colors ---*/
@@ -183,6 +186,10 @@
     grid-area: footer4;
 }
 
+.social-media a{
+    text-decoration: none;
+    color: inherit;
+}
 /*-------- media queries -------*/
 
 /* -------- Tablet view------------ */
