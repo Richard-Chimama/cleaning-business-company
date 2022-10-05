@@ -92,6 +92,7 @@ span {
     margin-left: 120px;
 }
 
+/*---Version for tablet view ---*/
 @media screen and (max-width: 960px) {
 
     .container1,
@@ -138,6 +139,7 @@ span {
     }
 }
 
+/*---Version for mobile view ---*/
 @media screen and (max-width: 768px){
     .container1 {
         display: flex;
