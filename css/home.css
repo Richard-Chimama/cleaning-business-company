@@ -7,7 +7,7 @@
     "introduction"
     "main-services"
     "additional-services";
-    width: 100%;
+    margin: 0;
 }
 
 /*-------Banner--------*/
@@ -38,23 +38,18 @@
     grid-area: introduction;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 60px;
-    margin: 2rem 0;
-    justify-content: space-evenly;
-}
-.introduction-image{
-    border-radius: 30% 10%;
-    width: 40%;
-    min-width: 345.5px;
+    gap: 40px;
+    margin: 2rem 1rem;
+    justify-content: center;
 }
 .introduction-image img{
-    width: 100%;
+    border-radius: 30% 10%;
     object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
-.introduction-content{
-    width: 45%;
-    min-width: 346.5px;
+.introduction-content, .introduction-image{
+   width: 100%;
 }
 .introduction-content h2{
     color: var(--orange);
@@ -109,26 +104,22 @@
 .main-service-content{
     display: flex;
     flex-direction: row;
-    gap: 60px;
-    flex-wrap: wrap;
+    gap: 40px;
     justify-content: space-evenly;
+    margin: 2rem 1rem;
 }
 .main-service-box{
     background-color: var(--white);
     padding: 20px;
-    width: 45%;
-    min-width: 346px;
+    width: 100%;
 }
 .main-service-subject, .main-service-description{
     padding-bottom: 1rem;
 }
-.main-service-image{
+.main-service-image img{
     width: 250px;
     height: 250px;
-    display: block;
     object-fit: cover;
-    margin-left: auto;
-    margin-right: auto;
 }
 .main-service-button{
     background-color: var(--orange);
@@ -153,21 +144,17 @@
 .additional-services{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     gap: 60px;
-    justify-content: space-evenly;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem 1rem;
 }
-.additional-services-content{
-    width: 45%;
-    min-width: 346.5px;
-    padding-left: 20px;
+.additional-services-content, .additional-service-image{
+    width: 100%;
 }
-.additional-service-image{
+.additional-service-image img{
     border-radius: 10% 30%;
-    width: 40%;
-    min-width: 345.5px;
+    width: 100%;
+    object-fit: cover;
+    max-height: 100%;
 }
 .additional-service-title-one{
     color: var(--orange);
@@ -191,4 +178,14 @@
 }
 .additional-services-content .contact-oss-button{
     margin-top: 2rem;
+}
+
+/*----------media queries--------*/
+@media (max-width: 768px) {
+    .introduction, .main-service-content, .additional-services {
+        flex-direction: column;
+    }
+    .introduction-image img,.additional-service-image img{
+        border-radius: 10px 10px;
+    }
 }
