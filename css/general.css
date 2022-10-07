@@ -18,7 +18,7 @@ body{
     --white-gray: #cfcbcb;
     --white: #FFF;
     --deep-gray: #333333;
-    --deep-green:#71baee84;
+    --light-black:rgba(0, 0, 0, 0.676);
 
 }
 
@@ -195,7 +195,7 @@ body{
 /* -------- Tablet view------------ */
 @media screen and (max-width:960px) {
     .header-container{
-        position:static;
+        position:sticky;
     }
     
     .navigation-bar .nav{
